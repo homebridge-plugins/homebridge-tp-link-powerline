@@ -1,5 +1,5 @@
 {
-  "pluginAlias": "ExampleHomebridgePlugin",
+  "pluginAlias": "TpLinkPowerline",
   "pluginType": "platform",
   "singular": true,
   "schema": {
@@ -9,7 +9,37 @@
         "title": "Name",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "TP-Link Powerline"
+      },
+      "devices": {
+        "title": "Devices",
+        "type": "array",
+        "uniqueItems": true,
+        "items": {
+          "title": "Device",
+          "type": "object",
+          "properties": {
+            "name": {
+              "title": "Name",
+              "type": "string",
+              "placeholder": "TP-Link Powerline"
+            },
+            "mac": {
+              "title": "MAC Address",
+              "type": "string",
+              "pattern": "^([A-Fa-f0-9]{2}:){5}[A-Fa-f0-9]{2}$",
+              "required": true
+            },
+            "serialNumber": {
+              "title": "Serial Number",
+              "type": "string"
+            },
+            "model": {
+              "title": "Model",
+              "type": "string"
+            }
+          }
+        }
       }
     }
   }

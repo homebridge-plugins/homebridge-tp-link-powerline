@@ -39,6 +39,6 @@
     "typescript": "^4.2.2"
   },
   "dependencies": {
-    "node-tp-link-powerline": "^0.1.3"
+    "node-tp-link-powerline": "^1.0.0"
   }
 }

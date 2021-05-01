@@ -59,13 +59,13 @@ export class TpLinkPowerlinePlatformAccessory {
      */
     setInterval(async () => {
       try {
-        await accessory.context.device.ping();
+        const ping = await accessory.context.device.ping();
+        const status = ping
+          ? this.platform.Characteristic.WiFiSatelliteStatus.CONNECTED
+          : this.platform.Characteristic.WiFiSatelliteStatus.NOT_CONNECTED
 
         // push the new value to HomeKit
-        this.service.updateCharacteristic(
-          this.platform.Characteristic.WiFiSatelliteStatus,
-          this.platform.Characteristic.WiFiSatelliteStatus.CONNECTED,
-        );
+        this.service.updateCharacteristic(this.platform.Characteristic.WiFiSatelliteStatus, status);
 
         this.platform.log.debug('Updating status:', 'Connected');
       } catch (error) {

@@ -1,8 +1,8 @@
 {
   "displayName": "TP-Link Powerline",
   "name": "homebridge-tp-link-powerline",
-  "version": "1.0.0",
-  "betaVersion": "1.0.0",
+  "version": "1.0.1",
+  "betaVersion": "1.0.1",
   "description": "Homebridgee TP-Link Powerline.",
   "license": "Apache-2.0",
   "repository": {

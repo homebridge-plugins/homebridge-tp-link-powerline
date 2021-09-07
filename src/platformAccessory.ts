@@ -69,7 +69,7 @@ export class TpLinkPowerlinePlatformAccessory {
 
         this.platform.log.debug('Updating status:', 'Connected');
       } catch (error) {
-        this.platform.log.error(error);
+        this.platform.log.error(`${error}`);
 
         // push the new value to HomeKit
         this.service.updateCharacteristic(
@@ -102,7 +102,7 @@ export class TpLinkPowerlinePlatformAccessory {
 
       this.platform.log.debug('Get Status ->', 'Connected');
     } catch (error) {
-      this.platform.log.error(error);
+      this.platform.log.error(`${error}`);
 
       status = this.platform.Characteristic.WiFiSatelliteStatus.NOT_CONNECTED;
 

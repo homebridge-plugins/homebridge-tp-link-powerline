@@ -7,4 +7,4 @@
 
 # Homebridge TP-Link Powerline Platform Plugin
 
-This is a Homebridge platform plugin for TP-Link Powerline devices.
+This Homebridge platform plugin for TP-Link Powerline devices shows the device status (connected or not connected).
